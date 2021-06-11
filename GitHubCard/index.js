@@ -60,18 +60,46 @@ const followersArray = [];
       </div>
     </div>
 */
-const card = document.createElement('div')
-const image = document.createElement('img')
-const cardInfo = document.createElement('div')
-const name = document.createElement('h3')
-const username = document.createElement('p')
-const location = document.createElement('p')
-const profile = document.createElement('p')
-const followers = document.createElement('p')
-const following = document.createElement('p')
-const bio = document.createElement('p')
-const link = document.createElement('a')
+function cardCreator(followersArray) {
+  const card = document.createElement('div')
+  const image = document.createElement('img')
+  const cardInfo = document.createElement('div')
+  const name = document.createElement('h3')
+  const username = document.createElement('p')
+  const location = document.createElement('p')
+  const profile = document.createElement('p')
+  const followers = document.createElement('p')
+  const following = document.createElement('p')
+  const bio = document.createElement('p')
+  const link = document.createElement('a')
 
+  card.appendChild(image)
+  card.appendChild(cardInfo)
+  cardInfo.appendChild(name)
+  cardInfo.appendChild(username)
+  cardInfo.appendChild(location)
+  cardInfo.appendChild(profile)
+  cardInfo.appendChild(followers)
+  cardInfo.appendChild(following)
+  cardInfo.appendChild(bio)
+  profile.appendChild(link)
+
+  card.classList.add('card')
+  cardInfo.classList.add('card-info')
+  name.classList.add('name')
+  username.classList.add('username')
+
+  image.setAttribute('src', 'avatar_url')
+  name.textContent = `${followersArray.name}`
+  username.textContent = `${followersArray.login}`
+  location.textContent = `${followersArray.location}`
+  link.textContent = `${followersArray.url}`
+  followers.textContent = `${followersArray.followers}`
+  following.textContent = `${followersArray.following}`
+  bio.textContent = '${followersArray.bio}'
+}
+
+cardCreator()
 
 
 /*
