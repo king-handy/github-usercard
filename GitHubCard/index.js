@@ -39,7 +39,9 @@ getGit('https://api.github.com/users/king-handy')
     user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+const followersArray = [
+  function 
+];
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
@@ -96,10 +98,13 @@ function cardCreator(followersArray) {
   link.textContent = `${followersArray.url}`
   followers.textContent = `${followersArray.followers}`
   following.textContent = `${followersArray.following}`
-  bio.textContent = '${followersArray.bio}'
+  bio.textContent = `${followersArray.bio}`
+
+  return cardCreator
 }
 
-cardCreator()
+const cards = document.querySelector('.cards')
+
 
 
 /*
