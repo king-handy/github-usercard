@@ -40,7 +40,7 @@ getGit('https://api.github.com/users/king-handy')
 */
 
 const followersArray = [
-  function 
+  // function 
 ];
 
 /*
