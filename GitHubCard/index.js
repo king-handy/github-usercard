@@ -3,6 +3,18 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+import axios from 'axios'
+import { get } from 'lodash';
+
+function getGit(url) {
+  axios.get(url)
+    .then((response) => {
+      console.log(response.data.results)
+      function user
+    })
+}
+
+getGit('https://api.github.com/user/king-handy')
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
